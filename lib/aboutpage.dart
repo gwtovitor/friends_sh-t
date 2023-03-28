@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flip_card/flip_card.dart';
 import 'package:flip_card/flip_card_controller.dart';
 import 'package:flutter/material.dart';
@@ -9,10 +7,7 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'dart:math';
 
 class CardPage extends StatefulWidget {
-  final List<String> listOfPlayers;
-  final int numberOfCards;
-  const CardPage(
-      {super.key, required this.numberOfCards, required this.listOfPlayers});
+  const CardPage({super.key});
 
   @override
   State<CardPage> createState() => _CardPageState();
@@ -22,11 +17,7 @@ class _CardPageState extends State<CardPage> {
   FlipCardController controller = FlipCardController();
   bool isFront = false;
   List cardlist = [];
-  int indice = 0;
-  late final List<String> _listOfPlayers;
-  late final int _numberOfCards;
-  List playerPoints = [];
-
+  var indice = 0;
   Future<String> carregaJson() async {
     // Carrega o conteúdo do arquivo JSON como uma String
     String jsonString = await rootBundle.loadString('assets/cards.json');
@@ -55,28 +46,8 @@ class _CardPageState extends State<CardPage> {
   @override
   void initState() {
     super.initState();
-    _listOfPlayers = widget.listOfPlayers;
-    _numberOfCards = widget.numberOfCards;
     main();
-    criacaoLista();
     controller = FlipCardController();
-  }
-
-  void criacaoLista() {
-    List<Map<String, dynamic>> listOfPlayersWithScore = [];
-    List<String> nomesJogadores = widget.listOfPlayers;
-    for (var player in nomesJogadores) {
-      listOfPlayersWithScore.add({'name': player, 'score': 0});
-    }
-    setState(() {
-      playerPoints = listOfPlayersWithScore;
-    });
-  }
-
-  addPointsToPlayer(index) {
-    setState(() {
-      playerPoints[index]['score']++;
-    });
   }
 
   @override
@@ -93,53 +64,8 @@ class _CardPageState extends State<CardPage> {
           height: double.infinity,
           child: Column(
             children: [
-              Container(
-                  alignment: Alignment.topRight,
-                  child: Padding(
-                    padding: EdgeInsets.only(top: 5.h, right: 2.w),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        showDialog(
-                          context: context,
-                          builder: (BuildContext context) {
-                            return AlertDialog(
-                              title: Text(
-                                'Pontuações dos Jogadores',
-                                textAlign: TextAlign.center,
-                              ),
-                              content: Container(
-                                width: double.maxFinite,
-                                child: ListView.builder(
-                                  itemCount: playerPoints.length,
-                                  itemBuilder:
-                                      (BuildContext context, int index) {
-                                    var player = playerPoints[index]['name'];
-                                    return ListTile(
-                                      title: Text(playerPoints[index]['name']),
-                                      trailing: Text(
-                                          '${playerPoints[index]['score']} pontos'),
-                                      onTap: () {},
-                                    );
-                                  },
-                                ),
-                              ),
-                              actions: <Widget>[
-                                ElevatedButton(
-                                  child: Text('Fechar'),
-                                  onPressed: () {
-                                    Navigator.of(context).pop();
-                                  },
-                                ),
-                              ],
-                            );
-                          },
-                        );
-                      },
-                      child: Text('Pontuação'),
-                    ),
-                  )),
               Padding(
-                padding: EdgeInsets.only(top: 10.h),
+                padding: EdgeInsets.only(top: 23.h),
                 child: SizedBox(
                   width: 70.w,
                   height: 50.h,
@@ -273,86 +199,8 @@ class _CardPageState extends State<CardPage> {
                                     MaterialStatePropertyAll(Colors.green)),
                             onPressed: () {
                               controller.toggleCard();
-
-                              showDialog(
-                                context: context,
-                                builder: (BuildContext context) {
-                                  return AlertDialog(
-                                    title: Text('Pontuações dos Jogadores'),
-                                    content: Container(
-                                      width: double.maxFinite,
-                                      child: ListView.builder(
-                                        itemCount: playerPoints.length,
-                                        itemBuilder:
-                                            (BuildContext context, int index) {
-                                          var player =
-                                              playerPoints[index]['name'];
-                                          return ListTile(
-                                            title: Text(
-                                                playerPoints[index]['name']),
-                                            trailing: Text(
-                                                '${playerPoints[index]['score']} pontos'),
-                                            onTap: () {
-                                              print(
-                                                  playerPoints[index]['name']);
-                                              if (playerPoints[index]
-                                                      ['score'] >=
-                                                  _numberOfCards) {
-                                                var vencedor =
-                                                    playerPoints[index]['name'];
-                                                print(vencedor);
-                                                showDialog(
-                                                  context: context,
-                                                  builder:
-                                                      (BuildContext context) {
-                                                    return AlertDialog(
-                                                      title: Text('Vencedor'),
-                                                      content: Text(
-                                                          '$vencedor é o amigo de merda'),
-                                                      alignment:
-                                                          Alignment.center,
-                                                      actions: [
-                                                        TextButton(
-                                                          onPressed: () {
-                                                            Navigator.of(
-                                                                    context)
-                                                                .popUntil(ModalRoute
-                                                                    .withName(
-                                                                        '/'));
-                                                          },
-                                                          child: Text(
-                                                              'Voltar ao menu'),
-                                                        ),
-                                                      ],
-                                                    );
-                                                  },
-                                                );
-                                              } else {
-                                                addPointsToPlayer(index);
-                                                Navigator.of(context).pop();
-                                                indice++;
-                                                if (indice == cardlist.length) {
-                                                  indice = 0;
-                                                }
-                                              }
-                                            },
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    actions: <Widget>[
-                                      ElevatedButton(
-                                        child: Text('Fechar'),
-                                        onPressed: () {
-                                          Navigator.of(context).pop();
-                                        },
-                                      ),
-                                    ],
-                                  );
-                                },
-                              );
                             },
-                            child: Text('Quem venceu a rodada?'))
+                            child: Text('Quem venceu?'))
                         : null,
                   )
                 ],
