@@ -124,46 +124,42 @@ class _CardPageState extends State<CardPage> {
                                     child: FutureBuilder(
                                       builder: (context, snapshot) {
                                         return Container(
-                                            height: double.infinity,
-                                            width: double.infinity,
-                                            child: Column(
-                                              children: [
-                                                Padding(
-                                                  padding: EdgeInsets.only(
-                                                      top: 5.h,
-                                                      left: 5.w,
-                                                      right: 5.w),
-                                                  child: Text(
-                                                    cardlist[indice]['frase'],
-                                                    style: TextStyle(
-                                                        fontWeight:
-                                                            FontWeight.w800),
-                                                  ),
-                                                ),
-                                                Padding(
-                                                  padding: EdgeInsets.only(
-                                                      top: 10.h),
-                                                  child: Text(
-                                                    'Autor: ' +
-                                                        cardlist[indice]
-                                                            ['autor'],
-                                                  ),
-                                                )
-                                              ],
-                                            ));
+                                          height: double.infinity,
+                                          width: double.infinity,
+                                          child: Center(
+                                            child: Text(
+                                              cardlist[indice]['frase'],
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.w800),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                          ),
+                                        );
                                       },
                                     ),
                                   )),
                               Flexible(
                                 flex: 1,
                                 child: Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.black,
-                                    borderRadius: BorderRadius.only(
-                                        bottomLeft: Radius.circular(8.0),
-                                        bottomRight: Radius.circular(8.0)),
-                                  ),
-                                ),
+                                    decoration: BoxDecoration(
+                                      color: Colors.black,
+                                      borderRadius: BorderRadius.only(
+                                          bottomLeft: Radius.circular(8.0),
+                                          bottomRight: Radius.circular(8.0)),
+                                    ),
+                                    child: Container(
+                                        width: double.infinity,
+                                        height: double.infinity,
+                                        child: Center(
+                                          child: Text(
+                                            'Autor: ' +
+                                                cardlist[indice]['autor'] +
+                                                '',
+                                            style: TextStyle(
+                                                fontSize: 7.sp,
+                                                color: Colors.white),
+                                          ),
+                                        ))),
                               )
                             ],
                           )),
