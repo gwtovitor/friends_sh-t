@@ -1,23 +1,157 @@
 [
     {
       "id" : 1,
-      "autor" : "GwTo",
-      "frase" : "Tomar uma e dar PT."
+      "autor" : "",
+      "frase" : "Estamos no velho oeste e somos procurados pelo xerife, a cabeça de quem vale menos?"
     },
     {
       "id" : 2,
-      "autor" : "d3gS",
-      "frase" : "Ligar para o ex depois de tomar uma."
+      "autor" : "",
+      "frase" : "Estamos naquele famoso reality show, quem seria eliminado com o maximo de rejeição?"
     },
     {
       "id" : 3,
-      "autor" : "PeTy",
-      "frase" : "Botar um baseado misturado com tabaco"
+      "autor" : "",
+      "frase" : "Quem seria mais provavel de ser preso"
     },
     {
       "id" : 4,
-      "autor" : "GwTo",
-      "frase" : "Vomitar na mesa "
+      "autor" : "",
+      "frase" : "Estamos naquele famoso reality show, quem seria o campeão?"
+    },
+    {
+      "id" : 5,
+      "autor" : "",
+      "frase" : "Estamos naquele famoso reality show, quem iria chorar com saudade da família?"
+    },
+    {
+      "id" : 6,
+      "autor" : "",
+      "frase" : "Quem seria mais provavel de virar morador de rua"
+    },
+    {
+      "id" : 7,
+      "autor" : "",
+      "frase" : "Quem é mais provavel de dar um PT em uma festa"
+    },
+    {
+      "id" : 8,
+      "autor" : "",
+      "frase" : "Em um rolê quem seria o mais provavel de entrar em uma briga?"
+    },
+    {
+      "id" : 9,
+      "autor" : "",
+      "frase" : "Quem é o mais provavel de virar crackudo"
+    },
+    {
+      "id" : 10,
+      "autor" : "",
+      "frase" : "Quem é o mais provavel de virar um traficante"
+    },
+    {
+      "id" : 11,
+      "autor" : "",
+      "frase" : "Somos todos politicos, quem sairia com dinheiro na cueca?"
+    },
+    {
+      "id" : 12,
+      "autor" : "",
+      "frase" : "Quem teria um filho primeiro?"
+    },
+    {
+      "id" : 13,
+      "autor" : "",
+      "frase" : "Quem é mais provavel de por os amigos em uma situação constrangedora"
+    } ,
+    {
+      "id" : 14,
+      "autor" : "",
+      "frase" : "Quem é mais provavel de se atrasar no proprio casamento"
+    },
+    {
+      "id" : 15,
+      "autor" : "",
+      "frase" : "Quem é mais provavel de ser o maior mentirosos do grupo"
     }
+    ,
+    {
+      "id" : 16,
+      "autor" : "",
+      "frase" : "Somos todos de uma quadrilha, quem é o mais provavel de ser o X9"
+      
+    },
+    {
+      "id" : 17,
+      "autor" : "",
+      "frase" : "Quem é mais provavel de gastar todo seu dinheiro em algo estúpido"
+    },
+    {
+      "id" : 18,
+      "autor" : "",
+      "frase" : "Quem é mais provavel de por fogo em casa por acidente"
+    },
+    {
+      "id" : 19,
+      "autor" : "",
+      "frase" : "Quem é mais provavel de ter fotos fazadas na internet"
+    },
+    {
+      "id" : 20,
+      "autor" : "",
+      "frase" : "Quem é mais provavel de ganhar na loteria"
+    },
+    {
+      "id" : 21,
+      "autor" : "",
+      "frase" : "Quem é mais provavel de ficar conhecido com algum video idiota na internet"
+    },
+    {
+      "id" : 22,
+      "autor" : "",
+      "frase" : "Quem é mais provavel de ganhar um concurso de peito/arroto"
+    },
+    {
+      "id" : 23,
+      "autor" : "",
+      "frase" : "Quem é mais provavel de pular de um penhasco"
+    },
+    {
+      "id" : 24,
+      "autor" : "",
+      "frase" : "Quem é mais provavel de sofrer um ataque de tubarões"
+    },
+    {
+      "id" : 25,
+      "autor" : "",
+      "frase" : "Quem é mais provavel de viajar para outro pais"
+    },
+    {
+      "id" : 26,
+      "autor" : "",
+      "frase" : "Quem é mais provavel de correr pelado na rua"
+    },
+    {
+      "id" : 27,
+      "autor" : "",
+      "frase" : "Quem é mais provavel de cometer uma loucura bebado"
+    },
+    {
+      "id" : 28,
+      "autor" : "",
+      "frase" : "Quem é mais provavel de sofrer uma overdose"
+    },
+    {
+      "id" : 29,
+      "autor" : "",
+      "frase" : "Quem é mais provavel de reprovar em todas as materias"
+    },
+    {
+      "id" : 30,
+      "autor" : "",
+      "frase" : "Quem é mais provavel de fazer perguntas idiotas"
+    }
+
+
 ]
    
