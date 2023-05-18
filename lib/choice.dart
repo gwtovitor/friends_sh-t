@@ -124,7 +124,7 @@ class _ChoicePageState extends State<ChoicePage> {
                           MaterialPageRoute(
                               builder: (context) => CardPage(
                                     listOfPlayers: _playerNames,
-                                    numberOfCards: _numberOfPlayers,
+                                    numberOfCards: _numberOfCards,
                                   )));
                     } else {
                       setState(() {

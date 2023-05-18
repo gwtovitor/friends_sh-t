@@ -12,27 +12,27 @@
     {
       "id" : 3,
       "autor" : "",
-      "frase" : "Quem seria mais provavel de ser preso"
+      "frase" : "Se fôssemos fugitivos da polícia, quem seria o primeiro a trair os outros?"
     },
     {
       "id" : 4,
       "autor" : "",
-      "frase" : "Estamos naquele famoso reality show, quem seria o campeão?"
+      "frase" : "Se todos fossem colocados em uma sala sem comunicação, quem seria o primeiro a quebrar o silêncio?"
     },
     {
       "id" : 5,
       "autor" : "",
-      "frase" : "Estamos naquele famoso reality show, quem iria chorar com saudade da família?"
+      "frase" : "Se todos fossem forçados a fazer uma tatuagem, quem escolheria a pior opção?"
     },
     {
       "id" : 6,
       "autor" : "",
-      "frase" : "Quem seria mais provavel de virar morador de rua"
+      "frase" : "Se todos fossem competir em um jogo de estratégia, quem seria o primeiro a trapacear?"
     },
     {
       "id" : 7,
       "autor" : "",
-      "frase" : "Quem é mais provavel de dar um PT em uma festa"
+      "frase" : "Quem é mais provavel de dar um PT em uma festa?"
     },
     {
       "id" : 8,
@@ -42,12 +42,12 @@
     {
       "id" : 9,
       "autor" : "",
-      "frase" : "Quem é o mais provavel de virar crackudo"
+      "frase" : "Se fôssemos todos em uma festa à fantasia, quem escolheria a fantasia mais inadequada?"
     },
     {
       "id" : 10,
       "autor" : "",
-      "frase" : "Quem é o mais provavel de virar um traficante"
+      "frase" : "Se todos fossem colocados em uma casa mal assombrada, quem seria o primeiro a sair correndo?"
     },
     {
       "id" : 11,
@@ -57,101 +57,200 @@
     {
       "id" : 12,
       "autor" : "",
-      "frase" : "Quem teria um filho primeiro?"
+      "frase" : "Se fôssemos todos em uma viagem de acampamento, quem seria o primeiro a reclamar das condições?"
     },
     {
       "id" : 13,
       "autor" : "",
-      "frase" : "Quem é mais provavel de por os amigos em uma situação constrangedora"
+      "frase" : "Quem é mais provavel de por os amigos em uma situação constrangedora?"
     } ,
     {
       "id" : 14,
       "autor" : "",
-      "frase" : "Quem é mais provavel de se atrasar no proprio casamento"
+      "frase" : "Quem é mais provavel de se atrasar no proprio casamento?"
     },
     {
       "id" : 15,
       "autor" : "",
-      "frase" : "Quem é mais provavel de ser o maior mentirosos do grupo"
+      "frase" : "Quem é mais provavel de ser o maior mentirosos do grupo?"
     }
     ,
     {
       "id" : 16,
       "autor" : "",
-      "frase" : "Somos todos de uma quadrilha, quem é o mais provavel de ser o X9"
+      "frase" : "Se precisássemos escolher apenas uma pessoa para representar o grupo em um concurso de feiura, quem seria escolhido?"
       
     },
     {
       "id" : 17,
       "autor" : "",
-      "frase" : "Quem é mais provavel de gastar todo seu dinheiro em algo estúpido"
+      "frase" : "Quem é mais provavel de gastar todo seu dinheiro em algo estúpido?"
     },
     {
       "id" : 18,
       "autor" : "",
-      "frase" : "Quem é mais provavel de por fogo em casa por acidente"
+      "frase" : "Quem é mais provavel de por fogo em casa por acidente?"
     },
     {
       "id" : 19,
       "autor" : "",
-      "frase" : "Quem é mais provavel de ter fotos fazadas na internet"
+      "frase" : "Se estivéssemos em uma festa em que todo mundo precisasse apresentar um talento, quem seria o pior?"
     },
     {
       "id" : 20,
       "autor" : "",
-      "frase" : "Quem é mais provavel de ganhar na loteria"
+      "frase" : "Estamos querendo fazer um rolê, quem daria a pior opção?"
     },
     {
       "id" : 21,
       "autor" : "",
-      "frase" : "Quem é mais provavel de ficar conhecido com algum video idiota na internet"
+      "frase" : "Estamos em um grupo de amigos, quem seria o primeiro a espalhar um boato falso sobre alguém só para ter assunto?"
     },
     {
       "id" : 22,
       "autor" : "",
-      "frase" : "Quem é mais provavel de ganhar um concurso de peito/arroto"
+      "frase" : "Quem é mais provavel de ganhar um concurso de peito/arroto?"
     },
     {
       "id" : 23,
       "autor" : "",
-      "frase" : "Quem é mais provavel de pular de um penhasco"
+      "frase" : "Estamos em um programa de TV ao vivo, quem seria o primeiro a dizer algo impróprio?"
     },
     {
       "id" : 24,
       "autor" : "",
-      "frase" : "Quem é mais provavel de sofrer um ataque de tubarões"
+      "frase" : "Estamos em um jogo de paintball, quem seria o que ficaria escondido o jogo inteiro?"
     },
     {
       "id" : 25,
       "autor" : "",
-      "frase" : "Quem é mais provavel de viajar para outro pais"
+      "frase" : "Se estivéssemos em um naufrágio, quem seria o primeiro a comer todos os suprimentos sem pensar no amanhã? "
     },
     {
       "id" : 26,
       "autor" : "",
-      "frase" : "Quem é mais provavel de correr pelado na rua"
+      "frase" : "Quem é mais provavel de após ingerir bebida alcoólica querer correr pelado na rua?"
     },
     {
       "id" : 27,
       "autor" : "",
-      "frase" : "Quem é mais provavel de cometer uma loucura bebado"
+      "frase" : "Se um mago transforma-se todos em um animal, quem viraria uma lesma?"
     },
     {
       "id" : 28,
       "autor" : "",
-      "frase" : "Quem é mais provavel de sofrer uma overdose"
+      "frase" : "Estamos todos em uma festaa, quem é mais provavel de sofrer uma overdose?"
     },
     {
       "id" : 29,
       "autor" : "",
-      "frase" : "Quem é mais provavel de reprovar em todas as materias"
+      "frase" : "Quem é o mais provável de falar mal de um amigo pelas costas?"
     },
     {
       "id" : 30,
       "autor" : "",
-      "frase" : "Quem é mais provavel de fazer perguntas idiotas"
+      "frase" : "Quem é o mais provável de mentir para conseguir um encontro no tinder?"
+    },
+    {
+      "id" : 31,
+      "autor" : "",
+      "frase" : "Depois de uma festa, quem provavelmente acordará na manhã seguinte sem saber onde está?"
+    },
+    {
+      "id" : 32,
+      "autor" : "",
+      "frase" : "Estamos em um bar, quem provavelmente vai levar uma bebida escondida sem pagar?"
+    },
+    {
+      "id" : 33,
+      "autor" : "",
+      "frase" : "Quem é mais provável de acabar com uma noite de festa mais cedo por beber demais?"
+    },
+    {
+      "id" : 34,
+      "autor" : "",
+      "frase" : "Quem é mais provável de chegar num rolê com uma droga estranha e deixar todo mundo se perguntando o que diabos é aquilo?"
+    },
+    {
+      "id" : 35,
+      "autor" : "",
+      "frase" : "Quem é mais provável de tentar convencer todo mundo a fazer shots quando ninguém mais quer?"
+    },
+    {
+      "id" : 36,
+      "autor" : "",
+      "frase" : "Quem é mais provável de dançar em cima da mesa do bar de forma constrangedora?"
+    },
+    {
+      "id" : 37,
+      "autor" : "",
+      "frase" : "Quem é mais provável de ligar para o ex após algumas bebidas?"
+    },
+    {
+      "id" : 38,
+      "autor" : "",
+      "frase" : "Quem é mais provável de perder a carteira ou celular depois de bebâdo?"
+    },
+    {
+      "id" : 39,
+      "autor" : "",
+      "frase" : "Quem é mais provável de mentir sobre sua idade para se sentir mais jovem ou experiente?"
+    },
+    {
+      "id" : 40,
+      "autor" : "",
+      "frase" : "Quem é mais provável de beber uma bebida forte sem notar que é forte até que já seja tarde demais?"
+    },
+    {
+      "id" : 41,
+      "autor" : "",
+      "frase" : "Quem é mais provável de gastar todo o seu dinheiro em bebidas e se arrepender no dia seguinte?"
     }
-
-
+    ,
+    {
+      "id" : 42,
+      "autor" : "",
+      "frase" : "Quem é mais provável de enviar videos constrangedores ou impróprias para alguém depois de algumas bebidas?"
+    },
+    {
+      "id" : 43,
+      "autor" : "",
+      "frase" : "Quem é mais provável de flertar com alguém e no outro dia se arrepender por causa da aparência da pessoa?"
+    },
+    {
+      "id" : 44,
+      "autor" : "",
+      "frase" : "Quem é mais provável de contar uma piada ofensiva ou inapropriada?"
+    },
+    {
+      "id" : 45,
+      "autor" : "",
+      "frase" : "Quem é mais provável de ser pego fazendo algo ilegal ou questionável na festa?"
+    },
+    {
+      "id" : 46,
+      "autor" : "",
+      "frase" : "Quem é mais provável de se envolver em um relacionamento de uma noite só?"
+    },
+    {
+      "id" : 47,
+      "autor" : "",
+      "frase" : "Quem é mais provável de se gabar de algo que não fez ou não sabe fazer?"
+    },
+    {
+      "id" : 48,
+      "autor" : "",
+      "frase" : "Quem é mais provável de pegar emprestado dinheiro de alguém para pagar suas bebidas e depois nao pagar?"
+    },
+    {
+      "id" : 49,
+      "autor" : "",
+      "frase" : "Quem é mais provavel de dar em cima de alguem comprometido?"
+    },
+    {
+      "id" : 50,
+      "autor" : "",
+      "frase" : "Quem é mais provável de beber até vomitar em público e precisar de ajuda para ir para casa?"
+    }
 ]
    

@@ -74,7 +74,44 @@ class _FirstPageState extends State<FirstPage> {
                   height: 2.h,
                 ),
                 ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: Text(
+                              'Somos a Docasgoon',
+                              textAlign: TextAlign.center,
+                            ),
+                            content: Container(
+                                width: double.maxFinite,
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      'Bem-vindos à Docasgoon, uma empresa indie de jogos formada por dois programadores apaixonados por criar experiências incríveis. Combinamos programação e paixão por jogos para desenvolver títulos únicos e divertidos. Com sua ajuda, continuaremos a criar jogos cativantes e divertidos. Junte-se a nós nessa jornada! \n\nAjude-nos com feedback ou financeiramente. Nosso email de contato também é nossa Pix caso deseje fazer alguma doação: ',
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(top: 2.h),
+                                      child: Text(
+                                        'docasgoon@docasgoon.com',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    )
+                                  ],
+                                )),
+                            actions: <Widget>[
+                              ElevatedButton(
+                                child: Text('Fechar'),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    },
                     style: ButtonStyle(
                         backgroundColor:
                             MaterialStatePropertyAll(Colors.black)),

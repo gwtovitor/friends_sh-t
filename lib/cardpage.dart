@@ -215,25 +215,13 @@ class _CardPageState extends State<CardPage> {
                               Flexible(
                                 flex: 1,
                                 child: Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.black,
-                                      borderRadius: BorderRadius.only(
-                                          bottomLeft: Radius.circular(8.0),
-                                          bottomRight: Radius.circular(8.0)),
-                                    ),
-                                    child: Container(
-                                        width: double.infinity,
-                                        height: double.infinity,
-                                        child: Center(
-                                          child: Text(
-                                            'Autor: ' +
-                                                cardlist[indice]['autor'] +
-                                                '',
-                                            style: TextStyle(
-                                                fontSize: 7.sp,
-                                                color: Colors.white),
-                                          ),
-                                        ))),
+                                  decoration: BoxDecoration(
+                                    color: Colors.black,
+                                    borderRadius: BorderRadius.only(
+                                        bottomLeft: Radius.circular(8.0),
+                                        bottomRight: Radius.circular(8.0)),
+                                  ),
+                                ),
                               )
                             ],
                           )),
@@ -293,14 +281,12 @@ class _CardPageState extends State<CardPage> {
                                             trailing: Text(
                                                 '${playerPoints[index]['score']} pontos'),
                                             onTap: () {
-                                              print(
-                                                  playerPoints[index]['name']);
+                                              print(_numberOfCards);
                                               if (playerPoints[index]
-                                                      ['score'] >=
-                                                  _numberOfCards) {
+                                                      ['score'] ==
+                                                  _numberOfCards - 1) {
                                                 var vencedor =
                                                     playerPoints[index]['name'];
-                                                print(vencedor);
                                                 showDialog(
                                                   context: context,
                                                   builder:
