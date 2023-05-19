@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:amigos_de_merda/choice.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flip_card/flip_card_controller.dart';
 import 'package:flutter/material.dart';
@@ -97,45 +98,66 @@ class _CardPageState extends State<CardPage> {
                   alignment: Alignment.topRight,
                   child: Padding(
                     padding: EdgeInsets.only(top: 5.h, right: 2.w),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        showDialog(
-                          context: context,
-                          builder: (BuildContext context) {
-                            return AlertDialog(
-                              title: Text(
-                                'Pontuações dos Jogadores',
-                                textAlign: TextAlign.center,
-                              ),
-                              content: Container(
-                                width: double.maxFinite,
-                                child: ListView.builder(
-                                  itemCount: playerPoints.length,
-                                  itemBuilder:
-                                      (BuildContext context, int index) {
-                                    var player = playerPoints[index]['name'];
-                                    return ListTile(
-                                      title: Text(playerPoints[index]['name']),
-                                      trailing: Text(
-                                          '${playerPoints[index]['score']} pontos'),
-                                      onTap: () {},
-                                    );
-                                  },
-                                ),
-                              ),
-                              actions: <Widget>[
-                                ElevatedButton(
-                                  child: Text('Fechar'),
-                                  onPressed: () {
-                                    Navigator.of(context).pop();
-                                  },
-                                ),
-                              ],
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        ElevatedButton(
+                          onPressed: () {
+                            showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return AlertDialog(
+                                  title: Text(
+                                    'Pontuações dos Jogadores',
+                                    textAlign: TextAlign.center,
+                                  ),
+                                  content: Container(
+                                    width: double.maxFinite,
+                                    child: ListView.builder(
+                                      itemCount: playerPoints.length,
+                                      itemBuilder:
+                                          (BuildContext context, int index) {
+                                        var player =
+                                            playerPoints[index]['name'];
+                                        return ListTile(
+                                          title:
+                                              Text(playerPoints[index]['name']),
+                                          trailing: Text(
+                                              '${playerPoints[index]['score']} pontos'),
+                                          onTap: () {},
+                                        );
+                                      },
+                                    ),
+                                  ),
+                                  actions: <Widget>[
+                                    ElevatedButton(
+                                      child: Text('Fechar'),
+                                      onPressed: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                    ),
+                                  ],
+                                );
+                              },
                             );
                           },
-                        );
-                      },
-                      child: Text('Pontuação'),
+                          child: Text('Pontuação'),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 2.w),
+                          child: ElevatedButton(
+                              style: ButtonStyle(
+                                  backgroundColor:
+                                      MaterialStatePropertyAll(Colors.red)),
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => ChoicePage()));
+                              },
+                              child: Text('Voltar')),
+                        ),
+                      ],
                     ),
                   )),
               Padding(
@@ -159,71 +181,118 @@ class _CardPageState extends State<CardPage> {
                         });
                       },
                       front: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Image.asset('assets/backgroundcard.png'),
-                          ],
-                        ),
-                      ),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(8.0)),
+                            border: Border.all(
+                              color: Colors.black,
+                              width: 2.0,
+                            ),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.all(0.5.h),
+                            child: Container(
+                                color: Colors.black,
+                                child: Padding(
+                                  padding: EdgeInsets.all(0.5.h),
+                                  child: Container(
+                                    decoration:
+                                        BoxDecoration(color: Colors.white),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Container(
+                                          width:
+                                              25.h, // Define a largura desejada
+                                          height:
+                                              25.h, // Define a altura desejada
+                                          child: Image.asset(
+                                              'assets/backgroundcard.jpg'),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                )),
+                          )),
                       back: Container(
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(8.0)),
                           ),
-                          child: Column(
-                            children: [
-                              Flexible(
-                                flex: 1,
+                          child: Padding(
+                            padding: EdgeInsets.all(1.h),
+                            child: Container(
+                              decoration: BoxDecoration(color: Colors.black),
+                              child: Padding(
+                                padding: EdgeInsets.all(0.5.h),
                                 child: Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.black,
-                                    borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(8.0),
-                                        topRight: Radius.circular(8.0)),
+                                  decoration:
+                                      BoxDecoration(color: Colors.white),
+                                  child: Padding(
+                                    padding: EdgeInsets.all(2.h),
+                                    child: Column(
+                                      children: [
+                                        Flexible(
+                                          flex: 1,
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                              color: Colors.white,
+                                              borderRadius: BorderRadius.only(
+                                                  topLeft: Radius.circular(8.0),
+                                                  topRight:
+                                                      Radius.circular(8.0)),
+                                            ),
+                                          ),
+                                        ),
+                                        Flexible(
+                                            flex: 3,
+                                            child: Container(
+                                              decoration: BoxDecoration(
+                                                color: Colors.white,
+                                              ),
+                                              child: FutureBuilder(
+                                                builder: (context, snapshot) {
+                                                  return Container(
+                                                    height: double.infinity,
+                                                    width: double.infinity,
+                                                    child: Center(
+                                                      child: Text(
+                                                        cardlist[indice]
+                                                            ['frase'],
+                                                        style: TextStyle(
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .w800),
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                      ),
+                                                    ),
+                                                  );
+                                                },
+                                              ),
+                                            )),
+                                        Flexible(
+                                          flex: 1,
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                              color: Colors.white,
+                                              borderRadius: BorderRadius.only(
+                                                  bottomLeft:
+                                                      Radius.circular(8.0),
+                                                  bottomRight:
+                                                      Radius.circular(8.0)),
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
-                              Flexible(
-                                  flex: 3,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                    ),
-                                    child: FutureBuilder(
-                                      builder: (context, snapshot) {
-                                        return Container(
-                                          height: double.infinity,
-                                          width: double.infinity,
-                                          child: Center(
-                                            child: Text(
-                                              cardlist[indice]['frase'],
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.w800),
-                                              textAlign: TextAlign.center,
-                                            ),
-                                          ),
-                                        );
-                                      },
-                                    ),
-                                  )),
-                              Flexible(
-                                flex: 1,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.black,
-                                    borderRadius: BorderRadius.only(
-                                        bottomLeft: Radius.circular(8.0),
-                                        bottomRight: Radius.circular(8.0)),
-                                  ),
-                                ),
-                              )
-                            ],
+                            ),
                           )),
                     ),
                   ),
@@ -294,7 +363,7 @@ class _CardPageState extends State<CardPage> {
                                                     return AlertDialog(
                                                       title: Text('Vencedor'),
                                                       content: Text(
-                                                          '$vencedor é o amigo de merda'),
+                                                          '$vencedor é o friendsh!t'),
                                                       alignment:
                                                           Alignment.center,
                                                       actions: [

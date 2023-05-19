@@ -63,7 +63,7 @@ flutter:
 
 
   assets:
-    - assets/backgroundcard.png
+    - assets/backgroundcard.jpg
     - assets/background.jpg
     - assets/cards.json
 

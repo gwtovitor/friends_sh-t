@@ -1,3 +1,4 @@
+import 'package:amigos_de_merda/firstpage.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -114,39 +115,56 @@ class _ChoicePageState extends State<ChoicePage> {
                     },
                   ),
                 ),
-                ElevatedButton(
-                  onPressed: () {
-                    _playerNames
-                        .removeWhere((element) => element.trim().isEmpty);
-                    if (_playerNames.length >= 3) {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => CardPage(
-                                    listOfPlayers: _playerNames,
-                                    numberOfCards: _numberOfCards,
-                                  )));
-                    } else {
-                      setState(() {
-                        _controllers.clear();
-                        _playerNames.clear();
-                        _controllers = List.generate(
-                          _numberOfPlayers,
-                          (_) => TextEditingController(),
-                        );
-                        _playerNames =
-                            List.generate(_numberOfPlayers, (_) => '');
-                      });
-                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                        content: Text(
-                            'Preencha o nome de pelo menos 3 jogadores',
-                            textAlign: TextAlign.center),
-                        duration: Duration(seconds: 2),
-                      ));
-                    }
-                  },
-                  child: Text('Jogar'),
-                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    ElevatedButton(
+                        style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStatePropertyAll(Colors.red)),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => FirstPage()));
+                        },
+                        child: Text('Voltar')),
+                    ElevatedButton(
+                      onPressed: () {
+                        _playerNames
+                            .removeWhere((element) => element.trim().isEmpty);
+                        if (_playerNames.length >= 3) {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CardPage(
+                                        listOfPlayers: _playerNames,
+                                        numberOfCards: _numberOfCards,
+                                      )));
+                        } else {
+                          setState(() {
+                            _controllers.clear();
+                            _playerNames.clear();
+                            _controllers = List.generate(
+                              _numberOfPlayers,
+                              (_) => TextEditingController(),
+                            );
+                            _playerNames =
+                                List.generate(_numberOfPlayers, (_) => '');
+                          });
+                          ScaffoldMessenger.of(context)
+                              .showSnackBar(const SnackBar(
+                            content: Text(
+                                'Preencha o nome de pelo menos 3 jogadores',
+                                textAlign: TextAlign.center),
+                            duration: Duration(seconds: 2),
+                          ));
+                        }
+                      },
+                      child: Text('Jogar'),
+                    ),
+                  ],
+                )
               ],
             ),
           ),
