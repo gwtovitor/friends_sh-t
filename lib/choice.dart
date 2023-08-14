@@ -5,7 +5,10 @@ import 'package:sizer/sizer.dart';
 import 'cardpage.dart';
 
 class ChoicePage extends StatefulWidget {
+  const ChoicePage({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _ChoicePageState createState() => _ChoicePageState();
 }
 
@@ -88,8 +91,9 @@ class _ChoicePageState extends State<ChoicePage> {
                   ],
                 ),
                 SizedBox(height: 5.h),
-                Text('Nomes dos jogadores:'),
-                SizedBox(height: 8.0),
+                const Text('Nomes dos jogadores:'),
+                const SizedBox(height: 8.0),
+                // ignore: sized_box_for_whitespace
                 Container(
                   height: 60.h, // Altura fixa do ListView
                   child: ListView.builder(
@@ -119,16 +123,16 @@ class _ChoicePageState extends State<ChoicePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     ElevatedButton(
-                        style: ButtonStyle(
+                        style: const ButtonStyle(
                             backgroundColor:
                                 MaterialStatePropertyAll(Colors.red)),
                         onPressed: () {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => FirstPage()));
+                                  builder: (context) => const FirstPage()));
                         },
-                        child: Text('Voltar')),
+                        child: const Text('Voltar')),
                     ElevatedButton(
                       onPressed: () {
                         _playerNames
@@ -161,7 +165,7 @@ class _ChoicePageState extends State<ChoicePage> {
                           ));
                         }
                       },
-                      child: Text('Jogar'),
+                      child: const Text('Jogar'),
                     ),
                   ],
                 )

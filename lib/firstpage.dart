@@ -16,7 +16,7 @@ class _FirstPageState extends State<FirstPage> {
     return Sizer(builder: (context, orientation, deviceType) {
       return Scaffold(
         body: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 image: DecorationImage(
               image: AssetImage('assets/background.jpg'),
               fit: BoxFit.cover,
@@ -33,10 +33,10 @@ class _FirstPageState extends State<FirstPage> {
                           MaterialPageRoute(
                               builder: (context) => ChoicePage()));
                     },
-                    style: ButtonStyle(
+                    style: const ButtonStyle(
                         backgroundColor:
                             MaterialStatePropertyAll(Colors.black)),
-                    child: Text('Novo Jogo')),
+                    child: const Text('Novo Jogo')),
                 SizedBox(
                   height: 2.h,
                 ),
@@ -46,17 +46,17 @@ class _FirstPageState extends State<FirstPage> {
                         context: context,
                         builder: (BuildContext context) {
                           return AlertDialog(
-                            title: Text(
+                            title: const Text(
                               'Como Jogar?',
                               textAlign: TextAlign.center,
                             ),
-                            content: Container(
+                            content: const SizedBox(
                                 width: double.maxFinite,
                                 child: Text(
                                     'Vire uma carta, conte até 3 e apontem simultaneamente para quem voces acham que combina mais com aquela condição, aquele que tiver mais pontos vence')),
                             actions: <Widget>[
                               ElevatedButton(
-                                child: Text('Fechar'),
+                                child: const Text('Fechar'),
                                 onPressed: () {
                                   Navigator.of(context).pop();
                                 },
@@ -66,10 +66,10 @@ class _FirstPageState extends State<FirstPage> {
                         },
                       );
                     },
-                    style: ButtonStyle(
+                    style: const ButtonStyle(
                         backgroundColor:
                             MaterialStatePropertyAll(Colors.black)),
-                    child: Text('Como Jogar?')),
+                    child: const Text('Como Jogar?')),
                 SizedBox(
                   height: 2.h,
                 ),
@@ -79,21 +79,21 @@ class _FirstPageState extends State<FirstPage> {
                         context: context,
                         builder: (BuildContext context) {
                           return AlertDialog(
-                            title: Text(
+                            title: const Text(
                               'Somos a Docasgoon',
                               textAlign: TextAlign.center,
                             ),
                             content: SingleChildScrollView(
-                              child: Container(
+                              child: SizedBox(
                                   width: double.maxFinite,
                                   child: Column(
                                     children: [
-                                      Text(
+                                      const Text(
                                         'Bem-vindos à Docasgoon, uma empresa indie de jogos formada por dois programadores apaixonados por criar experiências incríveis. Combinamos programação e paixão por jogos para desenvolver títulos únicos e divertidos. Com sua ajuda, continuaremos a criar jogos cativantes e divertidos. Junte-se a nós nessa jornada! \n\nAjude-nos com feedback ou financeiramente. Nosso email de contato também é nossa Pix caso deseje fazer alguma doação: ',
                                       ),
                                       Padding(
                                         padding: EdgeInsets.only(top: 2.h),
-                                        child: Text(
+                                        child: const Text(
                                           'docasgoon@docasgoon.com',
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold),
@@ -104,7 +104,7 @@ class _FirstPageState extends State<FirstPage> {
                             ),
                             actions: <Widget>[
                               ElevatedButton(
-                                child: Text('Fechar'),
+                                child: const Text('Fechar'),
                                 onPressed: () {
                                   Navigator.of(context).pop();
                                 },
@@ -114,10 +114,10 @@ class _FirstPageState extends State<FirstPage> {
                         },
                       );
                     },
-                    style: ButtonStyle(
+                    style: const ButtonStyle(
                         backgroundColor:
                             MaterialStatePropertyAll(Colors.black)),
-                    child: Text('Sobre nós'))
+                    child: const Text('Sobre nós'))
               ],
             )),
       );

@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:amigos_de_merda/choice.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flip_card/flip_card_controller.dart';
@@ -85,7 +83,7 @@ class _CardPageState extends State<CardPage> {
     return Sizer(builder: (context, orientation, deviceType) {
       return Scaffold(
         body: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               image: DecorationImage(
             image: AssetImage('assets/background.jpg'),
             fit: BoxFit.cover,
@@ -107,7 +105,7 @@ class _CardPageState extends State<CardPage> {
                               context: context,
                               builder: (BuildContext context) {
                                 return AlertDialog(
-                                  title: Text(
+                                  title: const Text(
                                     'Pontuações dos Jogadores',
                                     textAlign: TextAlign.center,
                                   ),
@@ -131,7 +129,7 @@ class _CardPageState extends State<CardPage> {
                                   ),
                                   actions: <Widget>[
                                     ElevatedButton(
-                                      child: Text('Fechar'),
+                                      child: const Text('Fechar'),
                                       onPressed: () {
                                         Navigator.of(context).pop();
                                       },
@@ -141,21 +139,22 @@ class _CardPageState extends State<CardPage> {
                               },
                             );
                           },
-                          child: Text('Pontuação'),
+                          child: const Text('Pontuação'),
                         ),
                         Padding(
                           padding: EdgeInsets.only(left: 2.w),
                           child: ElevatedButton(
-                              style: ButtonStyle(
+                              style: const ButtonStyle(
                                   backgroundColor:
                                       MaterialStatePropertyAll(Colors.red)),
                               onPressed: () {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => ChoicePage()));
+                                        builder: (context) =>
+                                            const ChoicePage()));
                               },
-                              child: Text('Voltar')),
+                              child: const Text('Voltar')),
                         ),
                       ],
                     ),
@@ -167,9 +166,9 @@ class _CardPageState extends State<CardPage> {
                   height: 50.h,
                   child: Card(
                     elevation: 0.0,
-                    margin: EdgeInsets.only(
+                    margin: const EdgeInsets.only(
                         left: 32.0, right: 32.0, top: 20.0, bottom: 0.0),
-                    color: Color(0x00000000),
+                    color: const Color(0x00000000),
                     child: FlipCard(
                       controller: controller,
                       direction: FlipDirection.HORIZONTAL,
@@ -184,7 +183,7 @@ class _CardPageState extends State<CardPage> {
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius:
-                                BorderRadius.all(Radius.circular(8.0)),
+                                const BorderRadius.all(Radius.circular(8.0)),
                             border: Border.all(
                               color: Colors.black,
                               width: 2.0,
@@ -197,8 +196,8 @@ class _CardPageState extends State<CardPage> {
                                 child: Padding(
                                   padding: EdgeInsets.all(0.5.h),
                                   child: Container(
-                                    decoration:
-                                        BoxDecoration(color: Colors.white),
+                                    decoration: const BoxDecoration(
+                                        color: Colors.white),
                                     child: Column(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
@@ -217,7 +216,7 @@ class _CardPageState extends State<CardPage> {
                                 )),
                           )),
                       back: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Colors.white,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(8.0)),
@@ -225,12 +224,13 @@ class _CardPageState extends State<CardPage> {
                           child: Padding(
                             padding: EdgeInsets.all(1.h),
                             child: Container(
-                              decoration: BoxDecoration(color: Colors.black),
+                              decoration:
+                                  const BoxDecoration(color: Colors.black),
                               child: Padding(
                                 padding: EdgeInsets.all(0.5.h),
                                 child: Container(
                                   decoration:
-                                      BoxDecoration(color: Colors.white),
+                                      const BoxDecoration(color: Colors.white),
                                   child: Padding(
                                     padding: EdgeInsets.all(2.h),
                                     child: Column(
@@ -238,7 +238,7 @@ class _CardPageState extends State<CardPage> {
                                         Flexible(
                                           flex: 1,
                                           child: Container(
-                                            decoration: BoxDecoration(
+                                            decoration: const BoxDecoration(
                                               color: Colors.white,
                                               borderRadius: BorderRadius.only(
                                                   topLeft: Radius.circular(8.0),
@@ -250,7 +250,7 @@ class _CardPageState extends State<CardPage> {
                                         Flexible(
                                             flex: 3,
                                             child: Container(
-                                              decoration: BoxDecoration(
+                                              decoration: const BoxDecoration(
                                                 color: Colors.white,
                                               ),
                                               child: FutureBuilder(
@@ -262,7 +262,7 @@ class _CardPageState extends State<CardPage> {
                                                       child: Text(
                                                         cardlist[indice]
                                                             ['frase'],
-                                                        style: TextStyle(
+                                                        style: const TextStyle(
                                                             fontWeight:
                                                                 FontWeight
                                                                     .w800),
@@ -277,7 +277,7 @@ class _CardPageState extends State<CardPage> {
                                         Flexible(
                                           flex: 1,
                                           child: Container(
-                                            decoration: BoxDecoration(
+                                            decoration: const BoxDecoration(
                                               color: Colors.white,
                                               borderRadius: BorderRadius.only(
                                                   bottomLeft:
@@ -308,7 +308,7 @@ class _CardPageState extends State<CardPage> {
                   SizedBox(
                     child: isFront
                         ? ElevatedButton(
-                            style: ButtonStyle(
+                            style: const ButtonStyle(
                                 backgroundColor:
                                     MaterialStatePropertyAll(Colors.red)),
                             onPressed: () {
@@ -318,14 +318,14 @@ class _CardPageState extends State<CardPage> {
                                 indice = 0;
                               }
                             },
-                            child: Text('Descartar'))
+                            child: const Text('Descartar'))
                         : null,
                   ),
                   SizedBox(width: 1.w),
                   SizedBox(
                     child: isFront
                         ? ElevatedButton(
-                            style: ButtonStyle(
+                            style: const ButtonStyle(
                                 backgroundColor:
                                     MaterialStatePropertyAll(Colors.green)),
                             onPressed: () {
@@ -335,7 +335,8 @@ class _CardPageState extends State<CardPage> {
                                 context: context,
                                 builder: (BuildContext context) {
                                   return AlertDialog(
-                                    title: Text('Pontuações dos Jogadores'),
+                                    title:
+                                        const Text('Pontuações dos Jogadores'),
                                     content: Container(
                                       width: double.maxFinite,
                                       child: ListView.builder(
@@ -361,7 +362,8 @@ class _CardPageState extends State<CardPage> {
                                                   builder:
                                                       (BuildContext context) {
                                                     return AlertDialog(
-                                                      title: Text('Vencedor'),
+                                                      title: const Text(
+                                                          'Vencedor'),
                                                       content: Text(
                                                           '$vencedor é o friendsh!t'),
                                                       alignment:
@@ -375,7 +377,7 @@ class _CardPageState extends State<CardPage> {
                                                                     .withName(
                                                                         '/'));
                                                           },
-                                                          child: Text(
+                                                          child: const Text(
                                                               'Voltar ao menu'),
                                                         ),
                                                       ],
@@ -397,7 +399,7 @@ class _CardPageState extends State<CardPage> {
                                     ),
                                     actions: <Widget>[
                                       ElevatedButton(
-                                        child: Text('Fechar'),
+                                        child: const Text('Fechar'),
                                         onPressed: () {
                                           Navigator.of(context).pop();
                                         },
@@ -407,7 +409,7 @@ class _CardPageState extends State<CardPage> {
                                 },
                               );
                             },
-                            child: Text('Quem venceu a rodada?'))
+                            child: const Text('Quem venceu a rodada?'))
                         : null,
                   )
                 ],
